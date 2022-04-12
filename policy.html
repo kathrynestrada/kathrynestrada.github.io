@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Private Policy</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body{
+                margin: 0;
+                padding: 0;
+            }
+            /* a "." instead of words in grid-template-areas leaves a white space*/
+            .container{
+                display: grid;
+                grid-template-columns:1fr;
+                grid-auto-rows: minmax(30px, auto);
+                grid-gap: 5px;
+                max-width: 1200px;
+                position: relative;
+                margin: 0 auto;
+                grid-template-areas:
+                    "logo"
+                    "contact"
+                    "cart"
+                    "search"
+                    "nav"
+                    "heroimage"
+                    "notice"
+                    "choice"
+                    "access"
+                    "security"
+                    "contact-info"
+                    "purpose"
+                    "notice-section"
+                    "choice-section"
+                    "access-section"
+                    "security-section"
+                    "contact-info-section"
+                    "purpose-section"
+                    "footer";
+                font-family: 'Montserrat', sans-serif;
+            }
+            .logo{
+                grid-area: logo;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                background-color: #ffd0d7;
+            }
+            .contact {
+                grid-area: contact;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                text-transform: uppercase;
+                background-color: #ffd0d7;
+            }
+            .cart {
+                grid-area: cart;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                text-transform: uppercase;
+                background-color: #ffd0d7;
+            }
+            .search{
+                grid-area: search;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                text-transform: uppercase;
+                background-color: #ffd0d7;
+            }
+            nav{
+                grid-area: nav;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                text-transform: uppercase;
+                height: 50px;
+                background-color: #FFB6C1;
+            }
+            .heroimage{
+                grid-area: heroimage;
+                background-image:url(images/scattered-petals.jpg);
+                background-repeat: no-repeat;
+                background-position: right bottom;
+                background-attachment: fixed;
+                background-size: cover;  
+                height: 300px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-transform: uppercase;
+                letter-spacing: .5rem;
+                padding: 20px 40px;
+                text-align: center;
+                padding: 30px; 
+                font-size: 40px;
+            }
+            .notice{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                grid-area: notice;
+                text-transform: uppercase;
+                height: 50px;
+                background-color: #ffd0d7;
+            }
+            .choice{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                grid-area: choice;
+                text-transform: uppercase;
+                height: 50px;
+                background-color: #ffd0d7;
+            }
+            .access{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                grid-area: access;
+                text-transform: uppercase;
+                height: 50px;
+                background-color: #ffd0d7;
+            }
+            .security{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                grid-area: security;
+                text-transform: uppercase;
+                height: 50px;
+                background-color: #ffd0d7;
+            }
+            .contact-info{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                grid-area: contact-info;
+                text-transform: uppercase;
+                height: 50px;
+                background-color: #ffd0d7;
+            }
+            .purpose{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                grid-area: purpose;
+                text-transform: uppercase;
+                height: 50px;
+                background-color: #ffd0d7;
+            }
+            .notice-section{
+                display: block;
+                justify-content: space-around;
+                align-items: center;
+                grid-area: notice-section;
+                padding: 10px;
+            }
+            .choice-section{
+                display: block;
+                justify-content: space-around;
+                align-items: center;
+                grid-area: choice-section;
+                padding: 10px;
+            }
+            .access-section{
+                display: block;
+                justify-content: space-around;
+                align-items: center;
+                grid-area: access-section;
+                padding: 10px;
+            }
+            .security-section{
+                display: block;
+                justify-content: space-around;
+                align-items: center;
+                grid-area: security-section;
+                padding: 10px;
+            }
+            .contact-info-section{
+                display: block;
+                justify-content: space-around;
+                align-items: center;
+                grid-area: contact-info-section;
+                padding: 10px;
+            }
+            .contact-info-section > ul{
+                display: inline-block;
+            }
+            ul{
+                list-style-position: inside; 
+            }
+            .purpose-section{
+                display: block;
+                justify-content: space-around;
+                align-items: center;
+                grid-area: purpose-section;
+                padding: 10px;
+            }
+            h1, h3{
+                display: flex;
+                justify-content: center;
+                align-items: center; 
+            }
+            h1{
+                background-color: #FFB6C1; 
+            }
+            footer{
+                grid-area: footer;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                background-color: #FFB6C1;
+                height: 100px;
+            }
+/*FOR TABLETS BELOW*/
+@media only screen and (min-width:620px){
+            .container {
+                display:grid;
+                grid-template-columns:repeat(6, 1fr);
+                grid-auto-rows:minmax(30px, auto);
+                grid-gap:5px;
+                grid-template-areas:
+                    "logo logo contact contact cart cart"
+                    "logo logo search search search search"
+                    "nav nav nav nav nav nav"
+                    "heroimage heroimage heroimage heroimage heroimage heroimage"
+                    "notice notice notice choice choice choice"
+                    "access access access security security security"
+                    "contact-info contact-info contact-info purpose purpose purpose"
+                    "notice-section notice-section notice-section notice-section notice-section notice-section"
+                    "choice-section choice-section choice-section choice-section choice-section choice-section"
+                    "access-section access-section access-section access-section access-section access-section"
+                    "security-section security-section security-section security-section security-section security-section"
+                    "contact-info-section contact-info-section contact-info-section contact-info-section contact-info-section contact-info-section"
+                    "purpose-section purpose-section purpose-section purpose-section purpose-section purpose-section"
+                    "footer footer footer footer footer footer";
+            }
+            }
+                    
+@media only screen and (min-width:900px){
+            .container {
+                display:grid;
+                grid-template-columns:repeat(6, 1fr);
+                grid-auto-rows:minmax(30px, auto);
+                grid-gap:5px;
+                grid-template-areas:
+                    "logo logo contact cart search search"
+                    "nav nav nav nav nav nav"
+                    "heroimage heroimage heroimage heroimage heroimage heroimage"
+                    "notice notice choice choice access access"
+                    "security security contact-info contact-info purpose purpose"
+                    "notice-section notice-section notice-section notice-section notice-section notice-section"
+                    "choice-section choice-section choice-section choice-section choice-section choice-section"
+                    "access-section access-section access-section access-section access-section access-section"
+                    "security-section security-section security-section security-section security-section security-section"
+                    "contact-info-section contact-info-section contact-info-section contact-info-section contact-info-section contact-info-section"
+                    "purpose-section purpose-section purpose-section purpose-section purpose-section purpose-section"
+                    "footer footer footer footer footer footer";
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+                <div class="logo"> <a href="index.html"><img src="images/logo-small.png" alt="Brand Logo"></a> </div>
+                <div class="contact"> contact us </div>
+                <div class="cart"> cart </div>
+                <div class="search"> Search </div>
+                <nav>
+                    <div><a href="product1.html">Skincare</a></div>
+                    <div><a href="product2.html">Makeup</a></div>
+                    <div><a href="policy.html">Private Policy</a></div>
+                </nav>
+            <div class="heroimage"> Private Policy </div>
+            <div class="notice"><a href="#notice-section"> notice </a></div>
+            <div class="choice"><a href="#choice-section"> choice </a></div>
+            <div class="access"><a href="#access-section"> access </a></div>
+            <div class="security"><a href="#security-section"> security </a></div>
+            <div class="contact-info"><a href="#contact-info-section"> contact info </a></div>
+            <div class="purpose"><a href="#purpose-section"> purpose </a></div>
+            <section class="notice-section" id="notice-section">
+                <h1>Notice</h1>
+                <p>The collection, use and sharing of all information collected through the Carefree Beauty website is determined by the customer. It is up to the user to input information they would want in our system, data collection is also limitied to what is relevant about the customer to better their experience while on the site and in the future with our company. Carefree Beauty does not associate any data to individual user identities. Any and all customer files may be permanently upon request of the customer.</p>
+                <h3>Data Collection and Sharing</h3>
+                <p>Carefree Beauty can collect a customer's name, email, phone number, date of birth, shipping and billing address and payment information. Browsing history within the site and frequently visited products are also collected as data to study the habits of users within our website. A customer can opt out of any data collection they may not want to provide and all information inputed within checkout is secure and confidential. Data is stored to better the expereince of customer's using our website in the future, to recommend products and give our team feedback for future launches. All information collected is up to user discretion and is not shared with any outside parties. It is prohibited by law to sell or distribute any personal information of our customers to any outside parties or companies.</p>
+                <h3>Polcity Changes</h3>
+                <p>This Privacy Statement was last revised on April 19th, 2021. In the instance a clause within this statement must me adjusted, changed or added this action may occur for any reason at any time. When our private policy has a significant change or addition all customers who are filed within our system will recieve an email to notify them of these changes. Also, Carefree Beauty will have a pop up window on our website 2 weeks following these updates to notify users. Before continuing shopping, customers will be required to check a box stating they have read, understood and agree with the changes made.</p>
+            </section>
+            <section class="choice-section" id="choice-section">
+                <h1>Choice</h1>
+                <p>Carefree Beauty's main goal is to provide users with the best possible expereince. To fit the needs of all our customers we are proud to offer the opportunity for customers to provide information which will help our web server to get to know their individual likes and habits making our website easy to navigate and shop. With the element of choice we provide all customers the opportunity to avoid sharing personal information if that is what they desire and will make them feel the best while shopping.</p>
+                <h3>Cookies and Opt Out Option</h3>
+                <p>The Carefree Beauty website may use "cookies" to match a user with web content specific to individual users' interests like product suggestions. Cookies may also keep track of online purchasing transactions including how long a customer was shopping, what products they purchased and how often they visit the website and purchase products. Sensitive personal information including personal adresses, billing information and all infromation recieved through our secure checkout is not stored within cookies.</p>
+                <h3>Customer Rights</h3>
+                <p>Any of our customers can request for the deletion of any personal information collected by contacting our team through our designated privacy email or phone number. After a request is made for the deletion of any or all personal information from our data system, Carefree Beauty will reach out via email within 10 business days to confirm the deletion of personal information from your file or delete your file entirely. After CareFree Beauty processes the request to delete information, it will delete the information requested by the customer in a secure and irreversible manner to prevent the data from being restored. After a customer recieves a confirmation email that their data has been terminated from our system it has been fully removed.</p>
+            </section>
+            <section class="access-section" id="access-section">
+                <h1>Access</h1>
+                <p>At Carefree Beauty, we value the customer and their information to better our own business and brand practices. We do so to fit the needs of our customers and provide an experience online that is secure and consistently improving. We hold the information our customers share within our website with care and only allow information to be used in the interest of benefiting the customer's individual experience as well as the expereinces of future customers. All information provided to Carefree Beauty is confidential and only provided to our Data Analysis and Marketing Teams, we do not share any information with outside parties. As stated before, all information provided to our Data Analysis and Marketing Teams does not have an attached identity to allow information to remain private. </p>
+                <h3>What Data is used for</h3>
+                <p>Information is collected by cookies enabled by the user, email signup for promotions, and placing an order. Our team is only allowed to view information given through the use of cookies or through pop up windows throughout the site that requests information such as email and birthday. All information within checkout is secure and confidential. With the information our team is provided, they will then follow up with researching two things with this information. First they will input the user into our customer files and second they will use this information as data to project future interactions with the customer and plan to better our website, products and brand to fit the needs of our customers. All information used is strategically important to analyze our current brand and business operations and better these practices to benefit our customers and expand our brand. Carefree Beauty does not associate any personal information to individual user identities. For example, by tracking a customer's activity on the Carefree Beauty website we are able to see what products customers are most interested in. With this information we can do a variety of things, first we can offer them other products they may be interested in, make products that may also be of interest to customers and predict what our customers are looking for to better their experience and create a sense of brand loyalty with the customer. </p>
+            </section>
+            <section class="security-section" id="security-section">
+                <h1>Security</h1>
+                <p>Carefree Beauty is committed to protecting the privacy and accuracy of confidential information of all users to the extent possible, subject to provisions of state and federal law. Carefree Beauty will not disclose any personal information regarding any users unless required by law. In particular, we do not re-distribute or sell personal information collected on our website to any outside or third party organizations. We value the security and privacy of all our users personal information and guarantee that all personal information is secure and protected.</p>
+                <h3>Data Safety</h3>
+                <p>Carefree Beauty is operated to maximize customer information security and privacy. Data safety is incredibly important to Carefree Beauty and our brand identity. We guarantee the security of any and all information collected within our website. To increase security, we provide protections within our website to only collect information like email and birthdays within secured pop up windows. Also we have our checkout procedure within a protected browser that is confidential and disables cookies from collecting any information. The guarantee of a secure and protected expereince while browsing the Carefree Beauty website and while inputting personal information is important to us as our brand identity is based around providing a secure and customer-focused expereince while using our website.</p>
+            </section>
+            <section class="contact-info-section" id="contact-info-section">
+                <h1>Contact Us</h1>
+                <p>If you have any questions, concerns or need assistance and need to get in contact with our team please refer to the options below and we will help assist you to the best of our ability. If you are contacting us with concerns about a specific order please have your order number and order date ready so we can get you the assistance you need.</p>
+                <ul>
+                    <li>Phone Number: 1-(800)-245-9800</li>
+                    <li>Email Adress: support@carefree.com</li>
+                </ul>
+                <p>If you have questions or concerns about how we collect, process and use your personal information, or if you would like to practice your rights as a customer to remove information on your customer file please contact us by calling or emailing our Customer Department, both methods of contact offered below. </p>
+                <ul>
+                    <li>Phone Number: 1-(800)-288-HELP</li>
+                    <li>Email Adress: privacy@carefree.com</li>
+                </ul>
+            </section>
+            <section class="purpose-section" id="purpose-section">
+                <h1>Purpose</h1>
+                <p> We are motivated by what the positive impact good ingredients, products and methods can have on your skin. We also love seeing the progress individuals have as far as their skincare journey and we are proud to be apart of so many individual's journeys to love the skin they are in. Skincare is at the base of all personal care, without a stable skincare routine that works for your skin there is no foundation. We are happy to help so many from beginners to skincare to professionals and excited to share our handcrafted formulas with you in our products.</p>
+                <p>It is Carefree Beauty's responsibility to protect the personal information shared within this website. We are responsibile to keep this information confidential and strictly within the use of our Data Analysis and Marketing teams. Any information collected within this website will not be publicized unless required to by law. Any and all information collected will not be redistributed or sold to outside parties. All personal information used for data analysis will not have an attached customer identity associated with it. </p>
+            </section>
+            <footer>
+                <div>Home</div>
+                <div>About Our Products</div>
+                <div>Careers</div>
+                <div>Contact Us</div>
+                <div>Private Policy</div>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Home</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body{
+                margin: 0;
+                padding: 0;
+            }
+            /* a "." instead of words in grid-template-areas leaves a white space*/
+            .container{
+                display: grid;
+                grid-template-columns:1fr;
+                grid-auto-rows: minmax(30px, auto);
+                grid-gap: 5px;
+                max-width: 1200px;
+                position: relative;
+                margin: 0 auto;
+                grid-template-areas:
+                    "logo"
+                    "contact"
+                    "cart"
+                    "search"
+                    "nav"
+                    "heroimage"
+                    "about"
+                    "main"
+                    "skincare"
+                    "makeup"
+                    "purpose"
+                    "policy"
+                    "footer";
+                font-family: 'Montserrat', sans-serif;
+            }
+            .logo{
+                grid-area: logo;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                background-color: #ffd0d7;
+            }
+            .contact {
+                grid-area: contact;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                text-transform: uppercase;
+                background-color: #ffd0d7;
+            }
+            .cart {
+                grid-area: cart;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                text-transform: uppercase;
+                background-color: #ffd0d7;
+            }
+            .search{
+                grid-area: search;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                text-transform: uppercase;
+                background-color: #ffd0d7;
+            }
+            nav{
+                grid-area: nav;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                text-transform: uppercase;
+                height: 50px;
+                background-color: #FFB6C1;
+            }
+            .heroimage{
+                grid-area: heroimage;
+                background-image:url(images/rose.jpg);
+                background-repeat: no-repeat;
+                background-position:center;
+                background-attachment: fixed;
+                background-size: cover;  
+                height: 300px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-transform: uppercase;
+                letter-spacing: .5rem;
+                padding: 20px 40px;
+                text-align: center;
+                padding: 30px;
+                font-size: 40px;
+            }
+            .about {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                grid-area: about;
+            }
+            main{
+                grid-area: main;
+                padding: 15px;
+            }
+            h1{
+                display: flex;
+                justify-content: center;
+                align-items: center; 
+            }
+            .skincare, .makeup{
+                background-repeat: no-repeat;
+                background-position: center center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-transform: uppercase;
+                letter-spacing: .5rem;
+                padding: 20px 40px;
+                text-align: center;
+                padding: 30px;
+            }
+            .skincare{
+                grid-area: skincare;
+                background-image:url(images/rose-petals-small.png);
+                background-repeat: no-repeat;
+                background-position: right top;
+                font-size: 25px;
+                border: 1px solid black;
+            }
+            .makeup{
+                grid-area: makeup;
+                background-image: url(images/rose.jpg);
+                background-repeat: no-repeat;
+                background-position: right top;
+                font-size: 25px;
+                border: 1px solid black;
+            }
+            .purpose{
+                grid-area: purpose;
+                padding: 15px;
+            }
+            .policy{
+                grid-area: policy;
+                padding: 15px;
+            }
+            .policy-button{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: none;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                margin: 4px 2px;
+                cursor: pointer;
+                background-color: #FFB6C1;
+                border: 1px solid black;
+            }
+            footer{
+                grid-area: footer;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                background-color: #FFB6C1;
+                height: 100px;
+            }
+/*FOR TABLETS BELOW*/
+@media only screen and (min-width:620px){
+            .container {
+                display:grid;
+                grid-template-columns:repeat(6, 1fr);
+                grid-auto-rows:minmax(30px, auto);
+                grid-gap: 5px;
+                grid-template-areas:
+                    "logo logo contact contact cart cart"
+                    "logo logo search search search search"
+                    "nav nav nav nav nav nav"
+                    "heroimage heroimage heroimage heroimage heroimage heroimage"
+                    "main main main main main main"
+                    "skincare skincare skincare makeup makeup makeup"
+                    "purpose purpose purpose purpose purpose purpose"
+                    "policy policy policy policy policy policy"
+                    "footer footer footer footer footer footer";
+            }
+            }
+@media only screen and (min-width:900px){
+            .container {
+                display:grid;
+                grid-template-columns:repeat(6, 1fr);
+                grid-auto-rows:minmax(30px, auto);
+                grid-gap:5px;
+                grid-template-areas:
+                    "logo logo contact cart search search"
+                    "nav nav nav nav nav nav"
+                    "heroimage heroimage heroimage heroimage heroimage heroimage"
+                    "main main main main main main"
+                    "skincare skincare skincare makeup makeup makeup"
+                    "purpose purpose purpose purpose policy policy"
+                    "footer footer footer footer footer footer";
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+                <div class="logo"> <a href="index.html"><img src="images/logo-small.png" alt="Brand Logo"></a> </div>
+                <div class="contact"> contact us </div>
+                <div class="cart"> cart </div>
+                <div class="search"> Search </div>
+                <nav>
+                    <div><a href="product1.html">Skincare</a></div>
+                    <div><a href="product2.html">Makeup</a></div>
+                    <div><a href="policy.html">Private Policy</a></div>
+                </nav>
+            <div class="heroimage"> Carefree Beauty  </div>
+            <main> <h1> About Us </h1> <p>At Carefree Beauty it is our main goal to provide clean skincare and makeup products that both you and your skin will love. We strive to create the best products possible by making our products with the best ingedients and free of animal-testing. We aim to provide our customers with a "carefree" approach to skincare and beauty products. Instead of searching for products that are cruelty-free,  good for the environment and made with the best ingredients, we guarantee that all our products are clean and cruelty-free. When creating clean beauty, we eliminate the use of fragrances, dyes, alcohol and a variety of other harmful ingredients commonly found in beauty products. Our products are made to fit the needs of various skin types so whether you have sensitive, oily, dry or normal skin, look no further for healthy and radiant skin.</p>
+            </main>
+            <div class="skincare"> <a href="product1.html"> Skincare </a></div>
+            <div class="makeup"><a href="product2.html"> Makeup </a></div>
+            <div class="purpose"><h1>Our Purpose</h1><p> We are motivated by what the positive impact good ingredients, products and methods can have on your skin. We also love seeing the progress individuals have as far as their skincare journey and we are proud to be apart of so many individual's journeys to love the skin they are in. Skincare is at the base of all personal care, without a stable skincare routine that works for your skin there is no foundation. We are happy to help so many from beginners to skincare to professionals and excited to share our handcrafted formulas with you in our products.</p></div>
+            <div class="policy"><h1>Private Policy</h1><p>It is our responsibility to keep the data and information collected from our customers through our website safe and confidential. To learn more about our private policy click on the link below.</p> <a class= "policy-button" href="policy.html">Private Policy</a> </div>
+            <footer>
+                <div>Home</div>
+                <div>About Our Products</div>
+                <div>Careers</div>
+                <div>Contact Us</div>
+                <div>Private Policy</div>
+            </footer>
+        </div>
+    </body>
+</html>

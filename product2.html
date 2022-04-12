@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Makeup</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body{
+                margin: 0;
+                padding: 0;
+            }
+            /* a "." instead of words in grid-template-areas leaves a white space*/
+            .container{
+                display: grid;
+                grid-template-columns:1fr;
+                grid-auto-rows: minmax(30px, auto);
+                grid-gap: 5px;
+                max-width: 1200px;
+                position: relative;
+                margin: 0 auto;
+                grid-template-areas:
+                    "logo"
+                    "contact"
+                    "cart"
+                    "search"
+                    "nav"
+                    "heroimage"
+                    "eyes"
+                    "lips"
+                    "new"
+                    "eyes-pics"
+                    "eyes-section"
+                    "lips-pics"
+                    "lips-section"
+                    "new-pics"
+                    "new-section"
+                    "footer";
+                font-family: 'Montserrat', sans-serif;
+            }
+            .logo{
+                grid-area: logo;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                background-color: #ffd0d7;
+            }
+            .contact {
+                grid-area: contact;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                text-transform: uppercase;
+                background-color: #ffd0d7;
+            }
+            .cart {
+                grid-area: cart;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                text-transform: uppercase;
+                background-color: #ffd0d7;
+            }
+            .search{
+                grid-area: search;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                text-transform: uppercase;
+                background-color: #ffd0d7;
+            }
+            nav{
+                grid-area: nav;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                text-transform: uppercase;
+                height: 50px;
+                background-color: #FFB6C1; 
+            }
+            .heroimage{
+                grid-area: heroimage;
+                background-image:url(images/bottom-rosepetals.jpg);
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-attachment: fixed;
+                background-size: cover;  
+                height: 300px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-transform: uppercase;
+                letter-spacing: .5rem;
+                padding: 20px 40px;
+                text-align: center;
+                padding: 30px;   
+                font-size: 40px;
+            }
+            .eyes{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                grid-area: eyes;
+                text-transform: uppercase;
+                height: 50px;
+                background-color: #ffd0d7;
+            }
+            .eyes-pics{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                grid-area: eyes-pics;
+                height: 300px;
+                padding: 5px;
+                width: 100%;
+                height: auto;
+            }
+            .mascara{
+                padding-right: 5px;
+                padding-left: 5px;
+                width: 100%;
+                height: auto;
+                box-shadow: 10px 10px 5px lightgrey;
+            }
+            .blue-mascara{
+                padding-right: 5px;
+                padding-left: 5px;
+                width: 100%;
+                height: auto; 
+                box-shadow: 10px 10px 5px lightgrey;
+            }
+            .eyebrow{
+                padding-right: 5px;
+                padding-left: 5px;
+                width: 100%;
+                height: auto;
+                box-shadow: 10px 10px 5px lightgrey;
+            }
+            .eyes-section{
+                display: block;
+                justify-content: space-around;
+                align-items: center;
+                grid-area: eyes-section;
+                padding: 10px;
+            }
+            .lips{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                grid-area: lips;
+                text-transform: uppercase;
+                height: 50px;
+                background-color: #ffd0d7;
+            }
+            .lips-pics{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                grid-area: lips-pics;
+                height: 300px;
+                padding: 5px;
+                width: 100%;
+                height: auto;
+            }
+            .lipbalm{
+                padding-right: 5px;
+                padding-left: 5px;
+                width: 100%;
+                height: auto;
+                box-shadow: 10px 10px 5px lightgrey;
+            }
+            .pink-lipstick{
+                padding-right: 5px;
+                padding-left: 5px;
+                width: 100%;
+                height: auto;
+                box-shadow: 10px 10px 5px lightgrey;
+            }
+            .nude-lipstick{
+                padding-right: 5px;
+                padding-left: 5px;
+                width: 100%;
+                height: auto;
+                box-shadow: 10px 10px 5px lightgrey;
+            }
+            .lips-section{
+                display: block;
+                justify-content: space-around;
+                align-items: center;
+                grid-area: lips-section;
+                padding: 10px;
+            }
+            .new{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                grid-area: new;
+                text-transform: uppercase;
+                height: 50px;
+                background-color: #ffd0d7;
+            }
+            .new-pics{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                grid-area: new-pics;
+                height: 300px;
+                padding: 5px;
+                width: 100%;
+                height: auto;
+            }
+            .new-lipstick{
+                padding-right: 5px;
+                padding-left: 5px;
+                width: 100%;
+                height: auto;
+                box-shadow: 10px 10px 5px lightgrey;
+            }
+            .new-section{
+                display:block;
+                justify-content: space-around;
+                align-items: center;
+                grid-area: new-section;
+                padding: 10px;
+            }
+            h1{
+                display:block;
+                text-align: center;
+            }
+            .table{
+                text-align: center;
+            }
+            footer{
+                grid-area: footer;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                background-color: #FFB6C1;
+                height: 100px;
+            }
+/*FOR TABLETS BELOW*/
+@media only screen and (min-width:620px){
+            .container {
+                display:grid;
+                grid-template-columns:repeat(6, 1fr);
+                grid-auto-rows:minmax(30px, auto);
+                grid-gap:5px;
+                grid-template-areas:
+                    "logo logo contact contact cart cart"
+                    "logo logo search search search search"
+                    "nav nav nav nav nav nav"
+                    "heroimage heroimage heroimage heroimage heroimage heroimage"
+                    "eyes eyes eyes lips lips lips"
+                    "new new new new new new"
+                    "eyes-section eyes-section eyes-section eyes-section eyes-section eyes-section"
+                    "eyes-pics eyes-pics eyes-pics eyes-pics eyes-pics eyes-pics"
+                    "lips-section lips-section lips-section lips-section lips-section lips-section"
+                    "lips-pics lips-pics lips-pics lips-pics lips-pics lips-pics"
+                    "new-section new-section new-section new-section new-section new-section"
+                    "new-pics new-pics new-pics new-pics new-pics new-pics"
+                    "footer footer footer footer footer footer";
+            }
+            }
+@media only screen and (min-width:900px){
+            .container {
+                display:grid;
+                grid-template-columns:repeat(6, 1fr);
+                grid-auto-rows:minmax(30px, auto);
+                grid-gap:5px;
+                grid-template-areas:
+                    "logo logo contact cart search search"
+                    "nav nav nav nav nav nav"
+                    "heroimage heroimage heroimage heroimage heroimage heroimage"
+                    "eyes eyes lips lips new new"
+                    "eyes-pics eyes-pics eyes-pics eyes-section eyes-section eyes-section"
+                    "lips-section lips-section lips-section lips-pics lips-pics lips-pics"
+                    "new-pics new-pics new-pics new-section new-section new-section"
+                    "footer footer footer footer footer footer";
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+                <div class="logo"> <a href="index.html"><img src="images/logo-small.png" alt="Brand Logo"></a> </div>
+                <div class="contact"> contact us </div>
+                <div class="cart"> cart </div>
+                <div class="search"> Search </div>
+                <nav>
+                    <div><a href="product1.html">Skincare</a></div>
+                    <div><a href="product2.html">Makeup</a></div>
+                    <div><a href="policy.html">Private Policy</a></div>
+                </nav>
+            <div class="heroimage"> Makeup </div>
+            <div class="eyes"> <a href="#eyes-section"> eyes </a></div>
+            <div class="lips"><a href="#lips-section"> lips </a></div>
+            <div class="new"><a href="#new-section"> new </a></div>
+            <section class="eyes-section" id="eyes-section">
+                <h1>Eyes</h1>
+                <p>Our Eye collection is currently catered to a "carefree" and easy routine! We currently have our Lifting Mascara in both Jet Black and Bubbly Blue. We also carry our Eyelash and Brow Wand to separate and shape lashes and brows. Whether you are looking for a product to give your lashes a lift or to stand out in the crowd, we have got you covered! </p>
+                <table style="width:85%" class="table">
+                    <tr>
+                        <th>Product</th> 
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>Lifing Mascara in Jet Black </td>
+                        <td>$15 USD</td>
+                    <tr>
+                        <td>Lifting Mascara in Bubbly Blue</td>
+                        <td>$15 USD</td>
+                    </tr>
+                    <tr>
+                        <td>Eyelash and Brow Wand</td>
+                        <td>$10 USD</td>
+                    </tr>
+                </table>
+            </section>
+            <aside class="eyes-pics">
+                <img class="mascara" src="images/mascara.jpg" alt="up close picture of mascara on eyelashes">
+                <img class="blue-mascara" src="images/blue-mascara.jpg" alt="up close picture of blue mascara on eyelashes">
+                <img class="eyebrow" src="images/applying-eyebrow.jpg" alt="brushing out eyebrow hairs">
+            </aside>
+            <section class="lips-section" id="lips-section">
+                <h1>Lips</h1>
+                <p>Our Lip collection is tailored toward a comfortable and long wear time while also moisturizing your lips. We currently offer our Moisturizing Lip Balm and Light-weight Liquid Lipstick in shades Pink Rose and Blush Nude. All our lip products are enfused with Chamomile and Coconut oil to leave your lips moisturized nourished after every application.</p>
+                <table style="width:85%" class="table">
+                    <tr>
+                        <th>Product</th> 
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>Moisturizing Lip Balm </td>
+                        <td>$10 USD</td>
+                    <tr>
+                        <td>Light-weight Liquid Lipstick in Pink Rose</td>
+                        <td>$14 USD</td>
+                    </tr>
+                    <tr>
+                        <td>Light-weight Liquid Lipstick in Blush Nude</td>
+                        <td>$14 USD</td>
+                    </tr>
+                </table>
+            </section>
+            <aside class="lips-pics">
+                <img class="lipbalm" src="images/lipbalm.jpg" alt="closeup of lip balm on woman's lips">
+                <img class="pink-lipstick" src="images/pink-lipstick.jpg" alt="closeup of pink lipstick on woman's lips">
+                <img class="nude-lipstick" src="images/nude-lip.jpg" alt="closeup of nude lipstick on woman's lips">
+            </aside>
+            <section class="new-section" id="new-section">
+                <h1>New</h1>
+                <p>Here is a sneak peak for some new shades of our Light-weight Liquid Lipstick! With this new launch we have not only increased the color selection within this line but we have also stepped up our formula! These new and improved liquid lipsticks are a semi-matte finish and can wear all day long without reapplication. The shades shown in the picture go from left to right: Blush Pink, Ruby Red, Blooming Pink, Playful Pink, and Berry. Coming Summer 2021! </p>
+                <table style="width:85%" class="table">
+                    <tr>
+                        <th>Product</th> 
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>Light-weight Liquid Lipstick in Blush Pink</td>
+                        <td>$14 USD</td>
+                    <tr>
+                        <td>Light-weight Liquid Lipstick in Ruby Red</td>
+                        <td>$14 USD</td>
+                    </tr>
+                    <tr>
+                        <td>Light-weight Liquid Lipstick in Blooming Pink</td>
+                        <td>$14 USD</td>
+                    </tr>
+                    <tr>
+                        <td>Light-weight Liquid Lipstick in Playful Pink</td>
+                        <td>$14 USD</td>
+                    </tr>
+                    <tr>
+                        <td>Light-weight Liquid Lipstick in Berry</td>
+                        <td>$14 USD</td>
+                    </tr>
+                </table>
+            </section>
+            <aside class="new-pics">
+                <img class="new-lipstick" src="images/new-lipsticks.jpg" alt="arrangement of new lipsticks">
+            </aside>
+            <footer>
+                <div>Home</div>
+                <div>About Our Products</div>
+                <div>Careers</div>
+                <div>Contact Us</div>
+                <div>Private Policy</div>
+            </footer>
+        </div>
+    </body>
+</html>
